@@ -64,7 +64,62 @@ public class ExampleUsingGeneratedStub
   
   public static int encode{}
   
-  public static void decode() {}
+  public static void decode(
+    final CarDecoder car,
+    final UnsafeBuffer directBuffer,
+    final int bufferOffset,
+    final int actingBlockLength,
+    final int actingVersion)
+    throws Exception
+  {
+    final byte[] buffer = new byte[128];
+    final StringBuilder sb = new StringBuilder();
+    
+    car.wrap(directBuffer, bufferOffset, actingBlockLength, activngVersion);
+    
+    sb.append().append();
+    sb.append().append();
+    sb.append().append();
+    sb.append().append();
+    
+    sb.append();
+    for (int i = 0, size = CarEncoder.someNumberLength(); i < size; i++)
+    {
+      sb.append(car.someNumbers(i)).append(", ");
+    }
+    
+    sb.append("\ncar.vehicleCode=");
+    for (int i = 0, size = CarEncoder.vehicleCodeLength(); i < size; i++)
+    {
+      sb.append((char)car.vehicleCode(i));
+    }
+    
+    final OptionalExtrasDecoder extras = car.extras();
+    
+    sb.append().append();
+    
+    final EngineDecoder engine = car.engine();
+    
+    sb.append().append();
+    
+    for ()
+    {}
+    
+    for () 
+    {}
+    
+    sb.append().append();
+    
+    sb.append().append();
+    
+    final unsafeBuffer tempBuffer = new UnsafeBuffer();
+    final int tempBufferLength = car.getActivationCode();
+    sb.append().append();
+    
+    sb.append().append();
+    
+    System.out.println(sb);
+  }
   
 }
 ```
