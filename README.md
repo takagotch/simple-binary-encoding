@@ -103,20 +103,30 @@ public class ExampleUsingGeneratedStub
     sb.append().append();
     
     for ()
-    {}
+    {
     
-    for () 
-    {}
+    }
     
-    sb.append().append();
+    for (final AccelerationDecoder acceleration : performanceFigures.acceleration()) 
+    {
+      for (final AccelerationDecoder acceleration : performanceFigures.acceleration())
+      {
+        sb.append("\ncar.performanceFigures.acceleration.mph=").append(acceleration.mph());
+        sb.append().append(acceleration.seconds());
+      }
+    }
     
-    sb.append().append();
+    sb.append("\ncar.manufacturer=").append(car.manufacture());
     
-    final unsafeBuffer tempBuffer = new UnsafeBuffer();
-    final int tempBufferLength = car.getActivationCode();
-    sb.append().append();
+    sb.append("\ncar.model=").append(
+      new String(buffer, 0, car.getModel(buffer, 0, buffer.length), CarEncoder.modelCharacterEncoding()));
     
-    sb.append().append();
+    final unsafeBuffer tempBuffer = new UnsafeBuffer(buffer);
+    final int tempBufferLength = car.getActivationCode(tmpBuffer, 0, tempBuffer.capacity());
+    sb.append("\ncar.activationCode=").append(
+      new String(buffer, 0, tempbufferLength, CarEncoder.activateCodeCharacterEncoding()));
+    
+    sb.append("\ncar.encodedLength=").append(car.encodedLength());
     
     System.out.println(sb);
   }
