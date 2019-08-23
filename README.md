@@ -102,9 +102,15 @@ public class ExampleUsingGeneratedStub
     
     sb.append().append();
     
-    for ()
+    for (final CarDecoder.PerformanceFiguresDecoder performanceFigures : car.performanceFigures())
     {
-    
+      sb.append("\ncar.performanceFigures.octaneRating=").append(performanceFigures.octaneRating());
+      
+      for (final AcceleratinDecoder acceleration : performanceFigures.acceleration())
+      {
+        sb.append("\ncar.performanceFigures.acceleration.mph=").append(acceleration.mph());
+        sb.append("\ncar.performanceFigures.acceleration.seconds=").append(acceleration.seconds());
+      }
     }
     
     for (final AccelerationDecoder acceleration : performanceFigures.acceleration()) 
